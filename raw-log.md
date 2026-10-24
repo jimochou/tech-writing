@@ -64,3 +64,6 @@ if ($proxy) {
 } else {
     Write-Host "未检测到系统代理，可能梯子没开"
 }
+换代理
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
