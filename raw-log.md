@@ -67,3 +67,7 @@ if ($proxy) {
 换代理
 git config --global http.proxy http://127.0.0.1:7890
 git config --global https.proxy http://127.0.0.1:7890
+
+2026-10-26 看着自己的仓库，有点兴奋。
+
+确认自己在哪：git rev-parse --show-toplevel
