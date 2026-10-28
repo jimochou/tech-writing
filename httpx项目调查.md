@@ -34,7 +34,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 <Response [200 OK]>
 ```
 
-安装成功，且能正常发送请求。两次命令在不同目录执行，说明 httpx 安装后不依赖当前路径。
+安装成功，且能正常发送请求。两次命令在不同目录下执行都能成功 import，说明在当前 Python 环境下，
+httpx 的可用性不依赖工作目录。
 
 ## 可改进的文档点
 1. "HTTPX is a fully featured HTTP client library for Python 3. It includes an integrated command line client, has support for both HTTP/1.1 and HTTP/2, and provides both sync and async APIs."
