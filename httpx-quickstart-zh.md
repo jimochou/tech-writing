@@ -81,7 +81,7 @@ python -c "import httpx; r = httpx.get('https://example.com'); print(r)"
 输出 `<Response [200 OK]>` 中，200 是 HTTP 状态码，表示请求成功。
 
 如果这一步报错（例如 `httpx.ConnectError`、`httpx.ProxyError`），先确认这台机器能打开
-https://example.com：浏览器也打不开就是网络问题，见 [常见问题](#常见问题)。
+[https://example.com](https://example.com)，浏览器也打不开就是网络问题，见 [常见问题](#常见问题)。
 
 ## 术语表速查
 
@@ -155,7 +155,7 @@ python -m pip install "httpx[cli]"
 
 排查：
 
-1. 用浏览器打开 https://example.com，打不开就是网络问题
+1. 用浏览器打开 [https://example.com](https://example.com)，打不开就是网络问题
 2. 不需要代理时，清掉代理环境变量后重试：
 
     ```powershell

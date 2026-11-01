@@ -159,3 +159,5 @@ python -m venv <目录>                             # 建一个独立环境
 & "<目录>\Scripts\python.exe" -m pip install <包>  # 用它装包（不激活也能用）
 & "<目录>\Scripts\python.exe" -c "import httpx"    # 用它验证
 Remove-Item -Recurse -Force <目录>            
+
+**裸 URL 后面紧跟中文，链接可能吞字。要给人点的链接，一律用 [文字](地址) 写。**
