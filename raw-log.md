@@ -153,3 +153,9 @@ Make sure you've installed everything with: pip install 'httpx[cli]'
 httpx.exe 随基础包安装，但命令行功能需要 [cli] 额外依赖；缺依赖时给出明确修复命令。
 
 
+### 临时测试环境（模拟"没装过"的读者）
+
+python -m venv <目录>                             # 建一个独立环境
+& "<目录>\Scripts\python.exe" -m pip install <包>  # 用它装包（不激活也能用）
+& "<目录>\Scripts\python.exe" -c "import httpx"    # 用它验证
+Remove-Item -Recurse -Force <目录>            
