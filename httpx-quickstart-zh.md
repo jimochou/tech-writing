@@ -17,6 +17,7 @@
 - 打开终端，运行 `python --version`
 - 看到 `Python 3.9` 以上（例如 `Python 3.14.7`）就可以继续
 - 低于 3.9 或提示找不到命令，见文末 [常见问题](#常见问题)
+- 本文的命令块以 `PS >` 开头，它表示终端提示符，输入时不需要敲这一部分
 
 ## 安装
 
@@ -26,15 +27,14 @@
 PS > python -m pip install httpx
 ```
 
-安装完成后，输出最后会出现类似这样一行：
-
+安装完成后，最后会看到类似这一行：
 ```text
-Successfully installed anyio-4.15.1 certifi-2026.10.23 h11-0.16.0
-httpcore-1.0.9 httpx-0.28.1 idna-3.20 typing_extensions-4.16.0
+Successfully installed … httpx-0.28.1 …
 ```
 
-依赖较多，中间会有若干 `Collecting` / `Downloading` 行；
-版本号在不同时间可能不同，只要出现 `Successfully installed` 且包含 `httpx` 即为成功。
+安装过程中可能出现若干 `Collecting` / `Downloading` 行，
+也可能出现 Retrying 之类的警告——只要最后出现
+Successfully installed 且包含 httpx，就说明成功。
 
 验证一下：
 
@@ -71,6 +71,17 @@ PS > python -c "import httpx; r = httpx.get('https://example.com'); print(r)"
 因本文档不覆盖 Python 安装，请到 [Python 下载页面](https://www.python.org/downloads/) 安装 3.9 以上版本。
 
 装好后回到本文「开始之前」第 2 步确认。
+
+### 安装卡住或出现 Retrying / ConnectionResetError
+
+原因：从 pypi.org 下载时网络被中断，国内网络较常见。
+pip 会自动重试，通常几分钟后仍能成功。
+
+如果一直失败，临时换国内镜像：
+
+```powershell
+PS > python -m pip install httpx -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ### 报错 ModuleNotFoundError
 
